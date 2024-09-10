@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: black;
+}
+
+nav{
+    height: 150px;
+    align-content: center;
+    animation-name: desvanecer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+nav ul{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul a{
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.5s;
+    letter-spacing: 2px;
+}
+ul li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+}
+
+nav ul a:hover{
+    transform: scale(1.1);
+    text-shadow: 0px 3px 15px white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+main .contenedor{
+    display: flex;
+}
+
+main .contenedor .texto{
+    margin: 100px 25px 0px 150px;
+    animation-name: desvanecer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+main .contenedor .texto h1{
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+
+main .contenedor .texto p{
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+main .contenedor .texto .vermas{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin-top: 30px;
+    align-content: center;
+    background: white;
+    font-size: 18px;
+    transition: all 0.8s;
+    outline: 1px solid white;
+}
+
+main .contenedor .texto .vermas:hover{
+    background: black;
+    color: white;
+    border-radius: 5px;
+}
+main .contenedor .texto .vermas:hover a{
+    color:white
+}
+
+main .contenedor .texto a{
+    color: black;
+}
+
+main .contenedor .imagen{
+    justify-content: center;
+    align-content: center;
+    margin: 100px 150px 0px 25px;
+    animation-name: desvanecer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+main .contenedor .imagen img{
+    width: 600px;
+    height:200px;
+}
+
+.menu{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+}
+
+.menu img{
+    width: 60px;
+}
+
+@keyframes desvanecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:1450px) {
+    main .contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+    main .contenedor .texto{
+        margin: 100px 150px 0px 150px;
+    }
+    main .contenedor .imagen{
+        margin: 100px 150px 0px 150px;
+        justify-content: center;
+    }
+    main .contenedor .imagen img{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:900px){
+    nav{
+        visibility: hidden;
+    }
+    .menu{
+        visibility: visible;
+    }
+}
